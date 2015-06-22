@@ -1,0 +1,41 @@
+body {
+    background:#eee;
+}
+h1 {
+    font-family: "DejaVu Sans",Verdana,Geneva,sans-serif !important;
+    font-size: 48px;
+    font-weight: bold;
+}
+.lead {
+    font-style:italic;
+}
+.container.ombre {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+img.ombre {
+    width:85%; 
+    margin:20px;
+}
+
+#tuto-faq p[role="presentation"] .glyphicon,
+#le-logiciel p[role="presentation"] .glyphicon,
+#jardin p[role="presentation"] .glyphicon {
+    font-size:50px;
+}
+
+
+
+.btn-lg.options-toggle, .btn-lg.calc-create {
+    height:60px !important;
+    margin-top:20px;
+}
+.btn-lg.calc-create {
+    font-size: 180%;
+}
+.calc-options {
+    margin-top:10px;
+}
+.modal-body h2 {font-size:20px;}
