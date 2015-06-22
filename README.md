@@ -10,7 +10,7 @@ Si vous souhaitez travailler avec nous, **forkez-nous sur [git.framasoft.org](ht
 Framacalc est un tableur collaboratif en ligne que Framasoft propose sur le site : https://framacalc.org
 
 Il repose sur le logiciel [Ethercalc](https://ethercalc.net/) que nous avons à peine retouché : traduction (intégrée officiellement dans ethercalc), page d'accueil (ici start.html) et ajout de la [Framanav](https://git.framasoft.org/framasoft/framanav) dans le fichier index.html.  
-Ce dépôt ne contient pas Ethercalc, juste nos modifications.
+Ce dépôt ne contient pas Ethercalc, juste nos modifications.  
 La page d'accueil s'appuie sur la librairie Bootstrap dont les fichiers se trouvent dans la [Framanav](https://git.framasoft.org/framasoft/framanav).
 
 * * *
