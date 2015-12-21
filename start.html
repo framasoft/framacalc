@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html manifest="manifest.appcache" lang="fr">
     <head>
         <title>Framacalc - Tableur collaboratif en ligne</title>
         <meta charset="utf-8" />
@@ -34,9 +34,11 @@
                                         </div>
                                     </div>
                                     <div class="text-center col-sm-12">
-                                        <button class="btn btn-lg btn-primary calc-create" type="submit">Créer un calc</button>
+                                        <button class="btn btn-lg btn-primary calc-create" type="submit" aria-describeby="#expiration-help">Créer un calc</button>
                                         <a id="calc-url" href="https://framacalc.org/" class="hidden" rel="nofollow"></a>
                                     </div>
+                                    <p class="help-block small col-sm-12" id="expiration-help"><br>Votre calc sera <b>supprimé au bout d’un an d’inactivité</b> (aucun accès, aucune modification), afin d’éviter de faire grossir indéfiniment notre base de données.</p>
+
                                 </fieldset>
                             </form>
                         </div>
