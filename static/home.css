@@ -1,7 +1,7 @@
 body {
     background:#eee;
 }
-h1 {
+.home h1 {
     font-family: "DejaVu Sans",Verdana,Geneva,sans-serif !important;
     font-size: 48px;
     font-weight: bold;
@@ -16,8 +16,9 @@ h1 {
 }
 
 img.ombre {
-    width:85%; 
+    width:85%;
     margin:20px;
+    box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.4);
 }
 
 #tuto-faq p[role="presentation"] .glyphicon,
@@ -26,11 +27,8 @@ img.ombre {
     font-size:50px;
 }
 
-
-
 .btn-lg.options-toggle, .btn-lg.calc-create {
     height:60px !important;
-    margin-top:20px;
 }
 .btn-lg.calc-create {
     font-size: 180%;
