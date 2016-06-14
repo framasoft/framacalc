@@ -8,8 +8,8 @@
 <title>Framacalc - tableur collaboratif en ligne</title>
 <script>
 if (!(window.location.hash.replace('#', ''))) {
-    if (window.location.href.match(/\/([^_][^\*\$\/]*)$/)) {
-        var SocialCalc = { _room: RegExp.$1 };
+    if (window.location.href.match(/\/([^_][^\*\$\/\?]*)(?:\?.*)?$/)) {
+        window.EtherCalc = window.SocialCalc = { _room: RegExp.$1 };
         document.title = SocialCalc._room + " – Framacalc";
     }
     else {
@@ -59,7 +59,8 @@ body
 .smaller {font-size:smaller;}
 .hide {display:none;}
 </style>
-<link rel="stylesheet" type="text/css" href="./static/home.css">
+<link rel="stylesheet" type="text/css" href="./static/makeup.css">
+<script src="./static/makeup.js"></script>
 <script src="./static/framacalc.js" type="text/javascript"></script>
 </head>
 <body onresize="if (typeof doresize != 'undefined') doresize();">
