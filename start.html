@@ -333,7 +333,7 @@ function post_csv (csv, id, newWin) {
 $.ajax({
     url: './_/' + id,
     method: 'PUT',
-    contentType: 'text/csv',
+    contentType: 'text/x-ethercalc-csv-double-encoded',
     processData: false,
     data: csv,
     success: function(data, msg, xhr) {
