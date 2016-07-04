@@ -54,6 +54,32 @@ jQuery(document).ready(function() {
         });
     }
     calc_exists();
+    
+    setTimeout(function() {
+      // Unhide first cols
+      if(jQuery('#te_fullgrid div[style*="unhideleft"]:eq(0)').parent().text() == 'A') {
+          jQuery('#te_fullgrid tr:eq(1) td:visible:eq(1) div[style*="unhideright"]').on('click', function() {
+              jQuery.ajax({
+                  type: "POST",
+                  url: window.location.href.replace(window.location.host,window.location.host+'/_'),
+                  data: JSON.stringify({command: "set A:"+jQuery('#te_fullgrid tr:eq(1) td:visible:eq(1)').text()+" hide"}),
+                  contentType: 'application/json'
+              });
+          });
+      };
+
+      // Unhide first rows
+      if(jQuery('#te_fullgrid div[style*="unhidetop"]:eq(0)').parent().parent().text() == '1') {
+          jQuery('#te_fullgrid tr:visible:eq(2) div[style*="unhidebottom"]').on('click', function() {
+              jQuery.ajax({
+                  type: "POST",
+                  url: window.location.href.replace(window.location.host,window.location.host+'/_'),
+                  data: JSON.stringify({command: "set 1:"+jQuery('#te_fullgrid tr:visible:eq(2) div[style*="unhidebottom"]').parent().text()+" hide"}),
+                  contentType: 'application/json'
+              });  
+          });
+      };
+    }, 5000);
 });
 
 
