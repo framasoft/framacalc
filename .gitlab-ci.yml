@@ -1,0 +1,41 @@
+image: framasoft/vuefs:latest
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+  - npm install
+  - npm run preview
+  - mv -f public/$CI_PROJECT_NAME/* public
+  artifacts:
+    paths:
+    - public
+  cache:
+    paths:
+      - node_modules/
+
+production:
+  stage: deploy
+  script:
+  - npm install
+  - npm run prod
+  - mkdir "${HOME}/.ssh"
+  - chmod 700 "${HOME}/.ssh"
+  - if [ ! -z ${DEPLOYEMENT_KNOWN_HOSTS+x} ]; then echo -e "${DEPLOYEMENT_KNOWN_HOSTS}" > ${HOME}/.ssh/known_hosts; fi
+  - eval `ssh-agent -s`
+  - if [ ! -z ${DEPLOYEMENT_KEY+x} ]; then ssh-add <(echo "${DEPLOYEMENT_KEY}" | base64 --decode -i); fi
+  - if [ ! -z ${DEPLOYEMENT_KEY+x} ]; then echo "put -r public/* ${DEPLOYEMENT_USER}/" | sftp ${DEPLOYEMENT_USER}@${DEPLOYEMENT_HOST}; fi
+  only:
+    - master
+
+# Push new translations strings to https://trad.framasoft.org
+trads:
+  stage: deploy
+  image: framasoft/push-trad:latest
+  script:
+  - sed -e "s@<project-version>.*</project-version>@<project-version>$CI_COMMIT_REF_SLUG</project-version>@" -i zanata.xml
+  - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then mkdir -p ${HOME}/.config; echo -e "${ZANATA_CONFIG_FRAMABOT}" > ${HOME}/.config/zanata.ini; fi
+  - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then make push-locales; fi
+  only:
+    - master
