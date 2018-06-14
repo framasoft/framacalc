@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="pull-right">
-    <dropdown ref="dropdown">
+    <dropdown ref="dropdown" menu-right>
       <btn type="button" class="btn btn-default dropdown-toggle"
         aria-haspopup="true" aria-expanded="false"
         :title="$t('msg.nav.langChange')">
