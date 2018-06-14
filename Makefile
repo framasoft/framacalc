@@ -1,5 +1,5 @@
 locales:
-	yaml2po -P --progress=none -i app/locales/en.yml -o po/framapad.pot
+	yaml2po -P --progress=none -i app/locales/en.yml -o po/framacalc.pot
 
 push-locales: locales
 	zanata-cli -q -B push
