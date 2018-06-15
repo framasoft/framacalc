@@ -7,7 +7,7 @@ meta:
   lead: Online collaborative spreadsheet
 nav:
   langChange: Change language
-  language: Language
+  lang: Language
 what:
   title: What is Framacalc?
   desc: 'A "calc" is an online collaborative spreadsheet.
@@ -26,14 +26,14 @@ what:
     '
 how:
   title: Features
-  collab: Collaborative editing (several users connected to the same spreadsheet can simultaneously modify cells)
+  collab: Collaborative editing (several users connected to the same spreadsheet can
+    simultaneously modify cells)
   func: Many functions available (statistics, financial, mathematics, text, etc.)
-  how: Possibility to comment cells
+  comment: Possibility to comment cells
   autosave: Permanent and automatic backup
   graph: Basic graphs (histogram, lines, points)
   export: HTML export, CSV
   size: 'Document size: up to 100,000 lines'
-
   share: 'Framacalc documents are easy to share (just provide the address),
 
     to export (to HTML, CSV), are saved permanently and automatically,
@@ -42,7 +42,6 @@ how:
 
     '
   demo: Want a <a href="https://lite.framacalc.org/CalcDeTest" rel="nofollow">demonstration</a>?
-
 public:
   title: Options
   name: Calc name
@@ -56,11 +55,11 @@ public:
 
     '
   create: Create a calc
-
 warning:
   title: Important
   close: Close
-  text1: Ethercalc, the software that powers Framacalc, currently suffers from various bugs that make the service unstable.
+  text1: Ethercalc, the software that powers Framacalc, currently suffers from various
+    bugs that make the service unstable.
   text2: 'We decided to host any new calc on a
 
     new installation of Ethercalc, which is proposed with less than
@@ -71,9 +70,8 @@ warning:
 
     '
   text3: Your old layers remain available at the web address you carefully bookmarked.
-
-  text4: Developers, think of <a href="https://github.com/audreyt/ethercalc">contribute to Ethercalc</a> !
-
+  text4: Developers, think of <a href="https://github.com/audreyt/ethercalc">contribute
+    to Ethercalc</a> !
 help:
   title: Getting Started
   desc: 'The interface has some differences compared to other spreadsheets.
@@ -81,7 +79,7 @@ help:
     They can be confusing.
 
     '
-  desc2: "If you need a hand, the answer to your questions may be there:"
+  desc2: 'If you need a hand, the answer to your questions may be there:'
   desc3: Otherwise, do not hesitate to contact us.
   faq: F.A.Q.
 software:
