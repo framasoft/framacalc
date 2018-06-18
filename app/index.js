@@ -50,10 +50,11 @@ for (let i = 0; i < locales.length; i += 1) {
 
   // Localized routes
   routes.push({ path: `/${locales[i]}`, component: Home });
-
-  // define defaultRouteLang
-  if (!window.vuefsPrerender) {
-    for (let j = 0; j < userLang.length; j += 1) {
+}
+// define defaultRouteLang
+if (!window.vuefsPrerender) {
+  for (let j = 0; j < userLang.length; j += 1) { // check if user locales
+    for (let i = 0; i < locales.length; i += 1) { // matches with app locales
       if (defaultRouteLang === '' && userLang[j].substring(0, 2).toLowerCase() === locales[i]) {
         defaultRouteLang = locales[i];
       }
