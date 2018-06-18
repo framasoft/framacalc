@@ -7,7 +7,7 @@ meta:
   lead: Online collaborative spreadsheet
 nav:
   langChange: Change language
-  language: Language
+  lang: Language
 what:
   title: What is Framacalc?
   desc: 'A "calc" is an online collaborative spreadsheet.

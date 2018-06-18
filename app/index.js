@@ -50,21 +50,19 @@ for (let i = 0; i < locales.length; i += 1) {
 
   // Localized routes
   routes.push({ path: `/${locales[i]}`, component: Home });
-
-  // define defaultRouteLang
-  if (!window.vuefsPrerender) {
-    for (let j = 0; j < userLang.length; j += 1) {
-      if (defaultRouteLang === '' && userLang[j].substring(0, 2).toLowerCase() === locales[i]) {
-        defaultRouteLang = locales[i];
-      }
+}
+// define defaultRouteLang
+for (let j = 0; j < userLang.length; j += 1) { // check if user locales
+  for (let i = 0; i < locales.length; i += 1) { // matches with app locales
+    if (defaultRouteLang === '' && userLang[j].substring(0, 2).toLowerCase() === locales[i]) {
+      defaultRouteLang = locales[i];
     }
   }
 }
 
 // Home redirection
 const currentURL = window.location.href.replace(/\/+$/, '');
-if (!window.vuefsPrerender &&
-  (currentURL.split('/')[3] === undefined || currentURL.split('/')[3] === process.env.BASE_URL) &&
+if ((currentURL.split('/')[3] === undefined || currentURL.split('/')[3] === process.env.BASE_URL) &&
   (currentURL.split('/')[4] === undefined)) {
   if (defaultRouteLang === '') {
     defaultRouteLang = defaultLocale;
