@@ -27,7 +27,7 @@ req.keys().forEach((key) => {
 const lang = window.location.href.split('/')[3].substr(0, 2).toLowerCase() || defaultLocale;
 document.getElementsByTagName('html')[0].setAttribute('lang', lang);
 const userLang = navigator.languages ||
-  [root.navigator.language || root.navigator.userLanguage];
+  [navigator.language || navigator.userLanguage];
 let defaultRouteLang = '';
 
 const messages = {};
