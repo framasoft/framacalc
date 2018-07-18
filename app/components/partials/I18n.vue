@@ -1,20 +1,16 @@
-<template lang="html">
+<template>
   <div class="pull-right">
     <dropdown ref="dropdown" menu-right>
       <btn type="button" class="btn btn-default dropdown-toggle"
         aria-haspopup="true" aria-expanded="false"
-        :title="$t('msg.nav.langChange')">
-        <i class="fa fa-lg fa-language" aria-hidden="true"></i> {{ $t("msg.nav.lang") }} <span class="caret"></span>
+        :title="$t('nav.langChange')">
+        <i class="fa fa-lg fa-language" aria-hidden="true"></i> {{ $t("nav.lang") }} <span class="caret"></span>
       </btn>
       <template slot="dropdown">
-        <li @click="changeLanguage('en')">
-          <router-link :to="'/en/' + (this.$route.path.split('/')[2] || '')">
-            English
-          </router-link>
-        </li>
-        <li @click="changeLanguage('fr')">
-          <router-link :to="'/fr/' + (this.$route.path.split('/')[2] || '')">
-            Français
+        <li v-for="lang in locales.avalaible"
+          @click="changeLanguage(lang)">
+          <router-link :to="'/' + lang + '/' + ($route.path.split('/')[2] || '')">
+            {{ locales[lang] }}
           </router-link>
         </li>
       </template>
@@ -31,8 +27,10 @@ export default {
   },
   data() {
     return {
+      data: this.$i18n.messages.data,
       currentComponent: '',
       switchLanguage: 'en',
+      locales: this.$i18n.messages.locales,
     };
   },
   methods: {

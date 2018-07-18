@@ -108,8 +108,35 @@ for (let i = 0; i < defaultDiacriticsRemovalMap.length; i += 1) {
   }
 }
 
-function removeDiacritics(str) {
-  return str.replace(/[^\u0000-\u007E]/g, function(a) { return diacriticsMap[a] || a; }); // eslint-disable-line
+function rmDiacritics(str) {
+  const s = str || '';
+  return s.replace(/[^\u0000-\u007E]/g, function(a) { return diacriticsMap[a] || a; }); // eslint-disable-line
 }
 
-export { removeDiacritics, randomName };
+function text(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function sanitize(str) {
+  const s = str || '';
+  return s.toLowerCase()
+    .replace(/@:[.a-z]+ /g, '') // remove vue-i18n var
+    .replace(/[ '’]/g, '-')
+    .replace(/[^a-zA-Z0-9-_.]/g, '');
+}
+
+function noFrama(str) {
+  const s = str || '';
+  return s.replace('framand', 'and')
+    .replace('framage', 'age')
+    .replace('framae', 'mae')
+    .replace('framin', 'min')
+    .replace('frame', 'me')
+    .replace('frama', '')
+    .replace('.', '')
+    .replace('my', 'myframa');
+}
+
+export { randomName, rmDiacritics, text, sanitize, noFrama };

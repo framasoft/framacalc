@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const fs = require('fs');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,7 +9,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const root = (process.env.NODE_ENV === 'preview') ? `/${process.env.INIT_CWD.match(/([^\/]*)\/*$/)[1]}/` : '/';
+let root = (process.env.NODE_ENV === 'preview') ? `/${process.env.INIT_CWD.match(/([^\/]*)\/*$/)[1]}/` : '/';
+for (let i = 0; i < process.argv.length; i += 1) {
+  if (process.argv[i].indexOf('--root=') > -1) {
+    root = `/${process.argv[i].split('=')[1]}/`;
+  }
+}
 
 let config = {
   entry: './app/index.js',
@@ -105,12 +111,26 @@ module.exports = config;
 
 if (process.env.NODE_ENV !== 'development') {
   // NODE_ENV === 'production|preview'
-  const locales = ['en', 'fr'];
   const routes = [root];
+  const locales = [];
+  const pages = [];
+  // Import locales list
+  fs.readdirSync('./app/locales').forEach(file => {
+    locales.push(file.replace(/(.*)\.yml/, '$1'));
+  });
+  // Import pages list
+  fs.readdirSync('./app/components/pages').forEach(file => {
+    pages.push(file.replace(/(.*)\.vue/, '$1'));
+  });
+  // Localized routes
   for (let i = 0; i < locales.length; i += 1) {
-    // Localized routes
-    routes.push(`${root}${locales[i]}`);
+    for (let j = 0; j < pages.length; j += 1) {
+      routes.push(
+        `${root}${locales[i]}${pages[j].toLowerCase().replace(/^/, '/').replace('/home', '')}`
+      );
+    }
   }
+
   module.exports.devtool = '#source-map';
   module.exports.optimization = {
     minimizer: [
@@ -140,6 +160,7 @@ if (process.env.NODE_ENV !== 'development') {
       renderer: new Renderer({
         headless: true,
         renderAfterDocumentEvent: 'render-event',
+        maxConcurrentRoutes: 4,
         injectProperty: 'vuefsPrerender',
         inject: {
           prerender: true,

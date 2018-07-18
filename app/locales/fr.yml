@@ -1,15 +1,11 @@
 meta:
-  lang: fr
-  title: Framacalc - Tableur collaboratif en ligne
-  name: Framacalc
-  baseURL: https://framacalc.org
-  framaname: <b class="violet">Frama</b><b class="vert">calc</b>
+  title: '@:data.meta.name - Tableur collaboratif en ligne'
   lead: Tableur collaboratif en ligne
 nav:
   langChange: Changer la langue
   lang: Langue
 what:
-  title: Qu’est ce que Framacalc ?
+  title: 'Qu’est ce que @:data.meta.name ?'
   desc: 'Un « calc » est un tableur collaboratif en ligne.
 
     Vos données sont automatiquement sauvegardées sur internet, et
@@ -34,7 +30,7 @@ how:
   export: Export HTML, CSV
   size: 'Taille du document : jusqu’à 100 000 lignes'
 
-  share: 'Les documents Framacalc sont faciles à partager (il suffit d’en communiquer l’adresse),
+  share: 'Les documents @:data.meta.framaname sont faciles à partager (il suffit d’en communiquer l’adresse),
 
     à exporter (en HTML, CSV), sont sauvegardés en permanence et automatiquement,
 
@@ -60,7 +56,7 @@ public:
 warning:
   title: Important
   close: Fermer
-  text1: Ethercalc, le logiciel qui propulse Framacalc, souffre actuellement de divers bugs qui rendent le service instable.
+  text1: Ethercalc, le logiciel qui propulse @:data.meta.framaname, souffre actuellement de divers bugs qui rendent le service instable.
   text2: 'Nous avons décidé d’héberger tout nouveau calc sur une
 
     nouvelle installation d’Ethercalc, qui est proposée avec moins de
@@ -86,7 +82,7 @@ help:
   faq: F.A.Q.
 software:
   title: Le logiciel
-  basedon: Framacalc repose sur le logiciel libre
+  basedon: '@:data.meta.framaname repose sur le logiciel libre'
   license: 'Ethercalc est sous <a href="https://github.com/audreyt/ethercalc#licensing">licence
 
     <abbr title="Common Public Attribution License">CPAL</abbr></a>

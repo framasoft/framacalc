@@ -1,15 +1,13 @@
 meta:
-  lang: en
-  title: Framacalc - Online collaborative spreadsheet
-  name: Framacalc
-  baseURL: https://framacalc.org
-  framaname: <b class="violet">Frama</b><b class="vert">calc</b>
+  title: '@:data.meta.name - Online collaborative spreadsheet'
   lead: Online collaborative spreadsheet
+
 nav:
   langChange: Change language
   lang: Language
+
 what:
-  title: What is Framacalc?
+  title: 'What is @:data.meta.name?'
   desc: 'A "calc" is an online collaborative spreadsheet.
 
     Your data is automatically saved on the internet, and
@@ -34,7 +32,7 @@ how:
   export: HTML export, CSV
   size: 'Document size: up to 100,000 lines'
 
-  share: 'Framacalc documents are easy to share (just provide the address),
+  share: '@:data.meta.framaname documents are easy to share (just provide the address),
 
     to export (to HTML, CSV), are saved permanently and automatically,
 
@@ -60,7 +58,7 @@ public:
 warning:
   title: Important
   close: Close
-  text1: Ethercalc, the software that powers Framacalc, currently suffers from various bugs that make the service unstable.
+  text1: Ethercalc, the software that powers @:data.meta.framaname, currently suffers from various bugs that make the service unstable.
   text2: 'We decided to host any new calc on a
 
     new installation of Ethercalc, which is proposed with less than
@@ -86,7 +84,7 @@ help:
   faq: F.A.Q.
 software:
   title: Software
-  basedon: Framacalc relies on free software
+  basedon: '@:data.meta.framaname is based on free software'
   license: 'Ethercalc is under <a href="https://github.com/audreyt/ethercalc#licensing">
 
     <abbr title="Common Public Attribution License">CPAL</abbr> license</a>

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container ombre">
     <vue-headful
-      :title="$t('msg.meta.title')"
+      :title="$t('meta.title')"
     />
     <header-component></header-component>
     <router-view></router-view>

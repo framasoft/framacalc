@@ -1,12 +1,12 @@
-<template lang="html">
+<template>
   <header role="banner" id="framaheader">
     <div class="pull-right">
       <I18n/>
     </div>
     <h1 id="framasoft" class="sitename">
-      <a :href="$t('msg.meta.baseURL')" v-html="$t('msg.meta.framaname')"></a>
+      <a :href="data.meta.baseURL" v-html="data.meta.framaname"></a>
     </h1>
-    <p class="lead">{{ $t("msg.meta.lead") }}</p>
+    <p class="lead">{{ $t("meta.lead") }}</p>
     <hr class="trait" role="presentation" />
   </header>
 </template>
@@ -17,7 +17,12 @@ export default {
   name: 'framaheader',
   components: {
     I18n,
-  }
+  },
+  data() {
+    return {
+      data: this.$i18n.messages.data,
+    }
+  },
 }
 </script>
 
