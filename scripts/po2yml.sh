@@ -1,5 +1,5 @@
 #!/bin/bash
-cp app/locales/en.yml po/template.yml
+cp ../app/locales/en.yml ../po/template.yml
 for i in po/*.po
 do
     j=$(echo $i | cut -d '.' -f 1   | cut -d '/' -f 2)

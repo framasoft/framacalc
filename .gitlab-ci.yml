@@ -35,6 +35,7 @@ trads:
   image: framasoft/push-trad:latest
   script:
   - sed -e "s@<project-version>.*</project-version>@<project-version>$CI_COMMIT_REF_SLUG</project-version>@" -i zanata.xml
+  - sed -e "s@<project>.*</project>@<project>$CI_PROJECT_NAME</project>@" -i zanata.xml
   - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then mkdir -p ${HOME}/.config; echo -e "${ZANATA_CONFIG_FRAMABOT}" > ${HOME}/.config/zanata.ini; fi
   - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then make push-locales; fi
   only:
