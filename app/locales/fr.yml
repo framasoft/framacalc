@@ -3,7 +3,7 @@ meta:
   lead: Tableur collaboratif en ligne
 nav:
   langChange: Changer la langue
-  lang: Langue
+  lang: Langage
 what:
   title: 'Qu’est ce que @:data.meta.name ?'
   desc: 'Un « calc » est un tableur collaboratif en ligne.
@@ -22,14 +22,15 @@ what:
     '
 how:
   title: Fonctionnalités
-  collab: Édition collaborative (plusieurs utilisateurs connectés à la même feuille de calcul peuvent modifier simultanément les cellules)
-  func: Nombreuses fonctions disponibles (statistiques, financières, mathématiques, texte, etc.)
+  collab: Édition collaborative (plusieurs utilisateurs connectés à la même feuille
+    de calcul peuvent modifier simultanément les cellules)
+  func: Nombreuses fonctions disponibles (statistiques, financières, mathématiques,
+    texte, etc.)
   comment: Possibilité de commenter des cellules
   autosave: Sauvegarde permanente et automatique
   graph: Graphiques de base (histogramme, lignes, points)
   export: Export HTML, CSV
   size: 'Taille du document : jusqu’à 100 000 lignes'
-
   share: 'Les documents @:data.meta.framaname sont faciles à partager (il suffit d’en communiquer l’adresse),
 
     à exporter (en HTML, CSV), sont sauvegardés en permanence et automatiquement,
@@ -38,7 +39,6 @@ how:
 
     '
   demo: Envie d’une <a href="https://lite.framacalc.org/CalcDeTest" rel="nofollow">démonstration</a> ?
-
 public:
   title: Options
   name: Nom du calc
@@ -52,7 +52,6 @@ public:
 
     '
   create: Créer un calc
-
 warning:
   title: Important
   close: Fermer
@@ -65,11 +64,11 @@ warning:
 
     afin d’améliorer sa stabilité (moins de plantages).
 
-  '
-  text3: Vos anciens calcs restent disponibles à l’adresse web que vous avez soigneusement enregistrée.
-
-  text4: Développeur·euse·s, pensez à <a href="https://github.com/audreyt/ethercalc">contribuer au code d’Ethercalc</a> !
-
+    '
+  text3: Vos anciens calcs restent disponibles à l’adresse web que vous avez soigneusement
+    enregistrée.
+  text4: Développeur·euse·s, pensez à <a href="https://github.com/audreyt/ethercalc">contribuer
+    au code d’Ethercalc</a> !
 help:
   title: Prise en main
   desc: 'L’interface présente quelques différences par rapport à d’autres tableurs.
@@ -77,7 +76,8 @@ help:
     Elles peuvent être déroutantes.
 
     '
-  desc2: 'Si vous avez besoin d’un coup de main, la réponse à vos questions se trouve peut-être là :'
+  desc2: 'Si vous avez besoin d’un coup de main, la réponse à vos questions se trouve
+    peut-être là :'
   desc3: Sinon, n’hésitez pas à nous contacter.
   faq: F.A.Q.
 software:
