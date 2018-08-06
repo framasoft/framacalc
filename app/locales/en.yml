@@ -1,13 +1,11 @@
 meta:
   title: '@:data.meta.name - Online collaborative spreadsheet'
   lead: Online collaborative spreadsheet
-
 nav:
   langChange: Change language
   lang: Language
-
 what:
-  title: 'What is @:data.meta.name?'
+  title: What is @:data.meta.name?
   desc: 'A "calc" is an online collaborative spreadsheet.
 
     Your data is automatically saved on the internet, and
@@ -56,7 +54,8 @@ public:
 warning:
   title: Important
   close: Close
-  text1: Ethercalc, the software that powers @:data.meta.framaname, currently suffers from various bugs that make the service unstable.
+  text1: Ethercalc, the software that powers @:data.meta.framaname, currently suffers
+    from various bugs that make the service unstable.
   text2: 'We decided to host any new calc on a
 
     new installation of Ethercalc, which is proposed with less than
