@@ -5,7 +5,7 @@ nav:
   langChange: Changer la langue
   lang: Langage
 what:
-  title: Qu’est ce que @:data.meta.name ?
+  title: 'Qu’est ce que @:data.meta.name ?'
   desc: 'Un « calc » est un tableur collaboratif en ligne.
 
     Vos données sont automatiquement sauvegardées sur internet, et
@@ -31,8 +31,7 @@ how:
   graph: Graphiques de base (histogramme, lignes, points)
   export: Export HTML, CSV
   size: 'Taille du document : jusqu’à 100 000 lignes'
-  share: 'Les documents @:data.meta.framaname sont faciles à partager (il suffit d’en
-    communiquer l’adresse),
+  share: 'Les documents @:data.meta.framaname sont faciles à partager (il suffit d’en communiquer l’adresse),
 
     à exporter (en HTML, CSV), sont sauvegardés en permanence et automatiquement,
 
@@ -56,8 +55,7 @@ public:
 warning:
   title: Important
   close: Fermer
-  text1: Ethercalc, le logiciel qui propulse @:data.meta.framaname, souffre actuellement
-    de divers bugs qui rendent le service instable.
+  text1: Ethercalc, le logiciel qui propulse @:data.meta.framaname, souffre actuellement de divers bugs qui rendent le service instable.
   text2: 'Nous avons décidé d’héberger tout nouveau calc sur une
 
     nouvelle installation d’Ethercalc, qui est proposée avec moins de
