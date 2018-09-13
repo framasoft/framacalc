@@ -1,25 +1,17 @@
 meta:
-  title: '@:data.meta.name - Online collaborative spreadsheet'
+  title: '@:data.txt.calc - Online collaborative spreadsheet'
   lead: Online collaborative spreadsheet
 nav:
   langChange: Change language
   lang: Language
 what:
-  title: What is @:data.meta.name?
-  desc: 'A "calc" is an online collaborative spreadsheet.
-
+  title: What is @:data.txt.calc?
+  desc: 'A “calc“ is an online collaborative spreadsheet.
     Your data is automatically saved on the internet, and
-
     your friends can collaborate on the document at the same time.
-
-    View all changes in real time!
-
-    '
+    View all changes in real time!'
   desc2: 'Work together on your inventories, your surveys,
-
-    your content, your meetings and much more!
-
-    '
+    your content, your meetings and much more!'
 how:
   title: Features
   collab: Collaborative editing (several users connected to the same spreadsheet can
@@ -30,13 +22,9 @@ how:
   graph: Basic graphs (histogram, lines, points)
   export: HTML export, CSV
   size: 'Document size: up to 100,000 lines'
-  share: '@:data.meta.framaname documents are easy to share (just provide the address),
-
+  share: '@:data.color.calc documents are easy to share (just provide the address),
     to export (to HTML, CSV), are saved permanently and automatically,
-
-    and remain always accessible by Internet
-
-    '
+    and remain always accessible by Internet'
   demo: Want a <a href="https://lite.framacalc.org/CalcDeTest" rel="nofollow">demonstration</a>?
 public:
   title: Options
@@ -44,61 +32,39 @@ public:
   warning: Do not choose a name too simple.
   samename: Anyone using the same calc name will access your content.
   help: 'Your calc will be <b> deleted after one year of inactivity</b>
-
     (no access, no modification), in order to avoid enlargement of
-
-    our database indefinitely.
-
-    '
+    our database indefinitely.'
   create: Create a calc
 warning:
   title: Important
   close: Close
-  text1: Ethercalc, the software that powers @:data.meta.framaname, currently suffers
+  text1: Ethercalc, the software that powers @:data.color.calc, currently suffers
     from various bugs that make the service unstable.
   text2: 'We decided to host any new calc on a
-
     new installation of Ethercalc, which is proposed with less than
-
     functionalities (no more import, no more multi-sheet calc),
-
-    to improve its stability (fewer crashes).
-
-    '
+    to improve its stability (fewer crashes).'
   text3: Your old layers remain available at the web address you carefully bookmarked.
   text4: Developers, think of <a href="https://github.com/audreyt/ethercalc">contribute
     to Ethercalc</a> !
 help:
   title: Getting Started
   desc: 'The interface has some differences compared to other spreadsheets.
-
-    They can be confusing.
-
-    '
+    They can be confusing.'
   desc2: 'If you need a hand, the answer to your questions may be there:'
   desc3: Otherwise, do not hesitate to contact us.
   faq: F.A.Q.
 software:
   title: Software
-  basedon: '@:data.meta.framaname is based on free software'
+  basedon: '@:data.color.calc is based on free software'
   license: 'Ethercalc is under <a href="https://github.com/audreyt/ethercalc#licensing">
-
     <abbr title="Common Public Attribution License">CPAL</abbr> license</a>
-
-    and uses many free libraries.
-
-    '
+    and uses many free libraries.'
 garden:
   title: Cultivate your garden
   contrib: 'To participate in the development of the software, suggest improvements
-
-    or simply download it, go to
-
-    '
+    or simply download it, go to'
   devsite: the development site
   install: 'If you wish to install this software for your own use
-
-    and thus gain in autonomy, we help you on :
-
-    '
+    and thus gain in autonomy, we help you on :'
   framacloud: https://framacloud.org/fr/cultiver-son-jardin/ethercalc.html
