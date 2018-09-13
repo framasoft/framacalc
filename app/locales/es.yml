@@ -1,0 +1,69 @@
+meta:
+  title: '@:data.txt.calc - Hoja de cálculo en línea'
+  lead: Hoja de cálculo en línea
+nav:
+  langChange: Cambiar el idioma
+  lang: Idioma
+  translate: Traducir
+what:
+  title: ¿Qué es @:data.txt.calc?
+  desc: Un “calc” es una hoja de cálculo en línea. Sus datos son guardados automáticamente
+    en internet, y sus amigos pueden colaborar al mismo tiempo. Vea todos los cambios en tiempo real!
+  desc2: Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus reuniones
+    y mucho más!
+how:
+  title: Características
+  collab: Edición colaborativa (varios usuarios conectados al mismo tiempo pueden
+    modificar celdas)
+  func: Muchas funciones disponibles (estadísticas, matemáticas, texto, etc.)
+  comment: Posibilidad de añadir comentarios a las celdas
+  autosave: Guardado automático y permanente
+  graph: Gráficos de base (histogramas, líneas, puntos)
+  export: Exportar a HTML, CSV
+  size: 'Tamaño del documento: hasta 100 000 líneas.'
+  share: Los documentos @:data.color.calc son fáciles de compartir (sólo hay que dar
+    la dirección), de exportar (a HTML, CSV), son guardados permanentemente y automáticamente,
+    y son siempre accesibles en Internet
+  demo: Quiere una <a href="https://lite.framacalc.org/CalcDeTest" rel="nofollow">demostración</a>?
+public:
+  title: Opciones
+  name: Nombre del calc
+  warning: No elija un nombre demasiado sencillo.
+  samename: Cualquier persona que conozca el nombre podrá acceder a su contenido.
+  help: Su calc será <b>eliminado después de un año de inactividad</b> (ni acceso,
+    ni modificación), para evitar el crecimiento indefinido de nuestra base de datos.
+  create: Crear un calc
+warning:
+  title: Importante
+  close: Cerrar
+  text1: Ethercalc, el software que propulsa @:data.color.calc, tiene actualmente
+    varios fallos que desestabilizan el servicio.
+  text2: Hemos decidido alojar los nuesvos calc en una nueva instalación de Ethercalc,
+    con menos funcionalidades (sin importación, sin multi-hojas), para mejorar su
+    estabilidad (menos caídas).
+  text3: Las capas antiguas permanecen disponibles en la dirección web que usted ha
+    marcado cuidadosamente.
+  text4: Desarrolladores, piensen en <a href="https://github.com/audreyt/ethercalc">contribuir
+    a Ethercalc</a>!
+help:
+  title: Cómo empezar
+  desc: La interfaz tiene varias diferencias con respecto a otras hojas de cálculo.
+    Esto puede ser confuso.
+  desc2: 'Si necesita una mano, la respuesta a sus preguntas puede que se encuentre
+    aquí:'
+  desc3: Sino, no dude en contactar con nosotros.
+  faq: PREGUNTAS FRECUENTES
+software:
+  title: Software
+  basedon: '@:data.color.calc está basado en software libre'
+  license: Ethercalc está bajo <a href="https://github.com/audreyt/ethercalc#licensing">licencia
+    <abbr title="Common Public Attribution License">CPAL</abbr></a> y usa muchas bibliotecas
+    libres.
+garden:
+  title: Cultive su jardín
+  contrib: Para participar al desarrollo del software, proponer mejoras o simplemente
+    descargarlo, puede ir a
+  devsite: la página de desarrollo
+  install: 'Si quiere instalar este software para su propio uso y de esta manera ganar
+    en autonomía, le podemos ayudar en:'
+  framacloud: https://framacloud.org/fr/cultiver-son-jardin/ethercalc.html
