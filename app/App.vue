@@ -2,6 +2,7 @@
   <div id="app" class="container ombre">
     <vue-headful
       :title="$t('meta.title')"
+      :html="{ body: {id: $route.meta.id } }"
     />
     <header-component></header-component>
     <router-view></router-view>

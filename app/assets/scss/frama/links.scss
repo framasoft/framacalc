@@ -1,0 +1,17 @@
+a { color:#0C5B7A; }
+
+a, a:link {
+  text-decoration:underline;
+  -moz-text-decoration-style: dotted;
+  -webkit-text-decoration-style: dotted;
+  -ms-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+a:hover, a:focus {
+  color:#635182;
+  text-decoration:underline;
+  -moz-text-decoration-style: solid;
+  -webkit-text-decoration-style: solid;
+  -ms-text-decoration-style: solid;
+  text-decoration-style: solid;
+}

@@ -1,0 +1,19 @@
+.bg-primary,
+.bg-primary a:not(.btn),
+a.bg-primary:focus:not(.btn),
+a.bg-primary:hover:not(.btn) {
+  color: #fff;
+  background-color: #6A5687;
+}
+.bg-success, a.bg-success:hover:not(.btn) {
+  background-color: #E3EBC7;
+}
+.bg-info, a.bg-info:hover:not(.btn) {
+  background-color: #E1F8FC;
+}
+.bg-warning, a.bg-warning:hover:not(.btn) {
+  background-color: #FFEBB5;
+}
+.bg-danger,a.bg-danger:hover:not(.btn) {
+  background-color: #fde0dc;
+}

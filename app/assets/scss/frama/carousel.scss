@@ -1,0 +1,89 @@
+.carousel-container {
+  .carousel {
+    margin: 1em;
+
+    a {
+      border-bottom: none;
+    }
+
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .carousel-inner {
+    padding-bottom: 75px;
+    box-shadow: $carousel-ombre;
+
+    > .item {
+      transition: -webkit-transform .6s ease-in-out;
+      transition: transform .6s ease-in-out;
+      transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+      perspective: 1000px;
+      display: none;
+    }
+    > .item.active,
+    > .item.next,
+    > .item.prev {
+      display: block;
+    }
+    > .item.active ~ .item.active {
+      display: none; /* prevent double slides bug */
+    }
+  }
+
+  .carousel-control.right, .carousel-control.left{
+    background-image: none;
+    color: #eee;
+  }
+
+  .play-pause {
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 60px;
+    left: 0%;
+
+    button {
+      cursor: pointer;
+      font-size: 30px;
+      z-index: 1000;
+      background: #f3f3f3;
+      border-radius: 30px;
+      color: #767676;
+      width: 40px;
+      height: 40px;
+      padding-left: 4px;
+      padding-top: 0px;
+      position: absolute;
+      opacity: 1;
+      text-shadow:none;
+      box-shadow: $button-ombre;
+      border-color: transparent;
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+
+  .carousel-caption {
+    background: #f3f3f3;
+    bottom:-75px;
+    color: #333;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 78px ;
+    text-shadow: none;
+    border-top: 1px solid #ddd;
+
+    h4 {
+      border: none;
+    }
+  }
+}
