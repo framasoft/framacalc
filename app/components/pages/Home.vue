@@ -5,7 +5,7 @@
       <div class="col-md-8" id="classic">
         <p class="text-center"><img :src="`${data['/img/']}screenshot-fr.png`" alt="" class="ombre" /></p>
 
-        <div class="col-md-10 col-md-offset-1 alert alert-danger alert-dismissible">
+        <!-- <div class="col-md-10 col-md-offset-1 alert alert-danger alert-dismissible">
           <button type="button" class="close" data-dismiss="alert" :aria-label="$t('warning.close')">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -14,7 +14,7 @@
           <p v-html="$t('warning.text2')"></p>
           <p v-html="$t('warning.text3')"></p>
           <p v-html="$t('warning.text4')"></p>
-        </div>
+        </div> -->
         <div class="col-md-10 col-md-offset-1 well calc-options">
           <form class="form-horizontal" id="create-calc">
             <fieldset>
