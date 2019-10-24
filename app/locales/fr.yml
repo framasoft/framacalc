@@ -32,7 +32,7 @@ public:
   name: Nom du calc
   warning: Ne choisissez pas un nom trop simple.
   samename: Toute personne utilisant le même nom de calc accédera à votre contenu.
-  help: Votre calc sera <b>supprimé au bout d’un an d’inactivité</b> (aucun accès,
+  help: Votre calc sera <b>supprimé au bout de 335 jours d’inactivité</b> (aucun accès,
     aucune modification), afin d’éviter de faire grossir indéfiniment notre base de
     données.
   create: Créer un calc
