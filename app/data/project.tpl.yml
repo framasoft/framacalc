@@ -1,0 +1,40 @@
+# NB: The content of this file overwrites what is defined in commons/*.yml
+# For example,
+#   link:
+#     soft: https://frama.pink
+#
+# will overwrites the value above in commons/link.yml
+#   soft: https://framasoft.org
+
+commons: # import everything if empty
+#  - blog
+  - cloud
+  - color
+#  - country
+  - doc
+#  - emoji
+  - git
+  - icon
+  - license
+  - link
+  - people
+  - soft
+  - src
+  - status
+  - taxonomy
+
+meta:
+  title: Framasoft
+  author: Framasoft
+  canonical: https://framasoft.org
+  description: Description is neededed for search engines, Twitter card and OpenGraph
+#  i18n: https://weblate.framasoft.org/projects/<project_name>
+  about:
+    title: '@:meta.title - @:about'
+    description: '@:meta.lead'
+
+txt:
+#  soft: text from color.soft (but you can reassign it here)
+
+html:
+#  soft: <a href="link.soft">color.soft</a>

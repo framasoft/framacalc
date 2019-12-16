@@ -1,0 +1,61 @@
+meta:
+  title: '@:txt.calc - Foglio di calcolo collaborativo online'
+  lead: Foglio di calcolo collaborativo online
+nav:
+  langChange: Cambia lingua
+  lang: Lingua
+  translate: Tradurre
+what: |-
+  ## Cos'è?
+
+  Un “calc” è un foglio di calcolo collaborativo online. I tuoi dati sono automaticamente
+  salvati in internet, e i tuoi amici possono collaborare al documento allo stesso
+  tempo. Vedi tutti i cambiamenti in tempo reale!
+
+  Lavorate insieme ai vostri cataloghi, i vostri sondaggi, il vostro contenuto,
+  i vostri incontri e molto di più!
+how: |-
+  ## Caratteristiche
+
+  - Modifiche collaborative (più utenti collegati allo stesso foglio di calcolo
+    possono modificare simultaneamente le celle)
+  - Molte funzioni disponibili (statistiche, finanziarie, matematiche, di testo,
+    ecc)
+  - Possibilità di commentare le celle
+  - Backup automatico e permanente
+  - Grafici di base (istogrammi, linee, punti)
+  - Esportazione in HTML, CSV
+  - Dimensioni del document: fino a 100,000 righe
+
+  I documenti @:color.calc sono facili da condividere (basta fornire l’indirizzo),
+  da esportare, sono salvati automaticamente, e rimangono sempre accessibili in Internet
+
+  Vuoi una [dimostrazione]({link})?
+public:
+  title: Opzioni
+  name: Nome del calc
+  help: Il tuo calc verrà <b> eliminato dopo 335 giorni di inattività</b> (nessun accesso,
+    nessuna modifica), per evitare una crescita esagerata del nostro database.
+  create: Crea un calc
+help:
+  title: Per iniziare
+  md: |-
+    L’interfaccia ha qualche differenza rispetto ad altri fogli di calcolo. Questo
+    può confondere.
+
+    Se hai bisogno di aiuto, la risposta alle tue domande può trovarsi nelle [nostre
+    <abbr title="Domande Frequenti">FAQ</abbr>]({link})
+    Altrimenti, non esitare a contattarci.
+software:
+  title: Software
+  md: |-
+    @:color.calc si basa su software libero [@:soft.calc](@:src.calc)
+
+    @:soft.calc è sotto [licenza <abbr title="Common Public Attribution License">
+    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing) e utilizza molte
+    librerie libere.
+garden:
+  title: Coltiva il tuo orto
+  md: |-
+    Per partecipare allo sviluppo del software, suggerire migliorie o semplicemente
+    scaricarlo, vai a [il sito di sviluppo](@:src.calc)

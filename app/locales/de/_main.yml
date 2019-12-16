@@ -1,0 +1,59 @@
+meta:
+  title: '@:txt.calc - Kollaborative Tabellenkalkulation online'
+  lead: Kollaborative Tabellenkalkulation online
+what: |-
+  ## Was ist es?
+
+  Ein "Calc" ist eine kollaborative Tabelle, die online im Browser genutzt
+  werden kann. Die eingegebenen Daten werden automatisch im Internet
+  gespeichert und mehrere Personen können einfach gleichzeitig am selben
+  Dokument arbeiten. Seht alle Änderungen in Echtzeit!
+
+  Arbeitet zusammen an euren Bestandslisten, Umfragen, Inhalten, Meetings
+  und mehr!
+how: |-
+  ## Eigenschaften
+
+  - Kollaboratives Bearbeiten (mehrere Benutzer können gleichzeitig in der
+    gleichen Tabelle Zellen ändern)
+  - Viele Funktionen verfügbar (Statistik, Finanzfunktionen, Mathematik,
+    Text, etc.)
+  - Möglichkeit, Zellen zu kommentieren
+  - Dauerhaftes und automatisches Backup
+  - Einfache Graphen (Histogramm, Linien, Punkte)
+  - HTML-Export, CSV
+  - Dokumentgröße: Bis 100.000 Zeilen
+
+  @:color.calc Dokumente sind leicht zu teilen (einfach die Addresse weitergeben),
+  zu exportieren, werden automatisch gespeichert und bleiben immer über das
+  Internet erreichbar.
+
+  Noch nicht überzeugt? Einfach [ausprobieren]({link})!
+public:
+  title: Möglichkeiten
+  name: Name von dem Calc
+  help: Euer Calc wird <b>nach 335 Tagen ohne Aktivität gelöscht</b>
+    (kein Zugriff, keine Veränderung) um zu verhindern, dass unsere Datenbank
+    endlos wächst.
+  create: Calc erstellen
+help:
+  title: Los geht's!
+  md: |-
+    Die Benutzeroberfläche unterscheidet sich etwas von anderen
+    Tabellenkalkulationsprogrammen. Das kann etwas verwirrend sein.
+
+    Wenn ihr etwas Hilfe braucht könntet ihr hier fündig [werden]({link}).
+    Sonst zögern Sie nicht, uns zu kontaktieren.
+software:
+  title: Software
+  md: |-
+    @:color.calc  basiert auf freier Software [@:soft.calc](@:src.calc)
+
+    @:soft.calc steht unter der  [<abbr title="Common Public Attribution License">
+    CPAL</abbr>-Lizenz](https://github.com/audreyt/ethercalc#licensing)
+     und verwendet viele freie Softwarebibliotheken.
+garden:
+  title: Kultiviert euren Garten
+  md: |-
+    Um an der Entwicklung der Software teilzunehmen, Verbesserungen vorzuschlagen
+    oder sie einfach nur herunterzuladen, besucht [das Github-Repository](@:src.calc)

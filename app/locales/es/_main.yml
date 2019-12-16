@@ -1,0 +1,56 @@
+meta:
+  title: '@:txt.calc - Hoja de cálculo en línea'
+  lead: Hoja de cálculo en línea
+what: |-
+  ## ¿Qué es esto?
+
+  Un “calc” es una hoja de cálculo en línea. Sus datos son guardados automáticamente
+  en internet, y sus amigos pueden colaborar al mismo tiempo. Vea todos los cambios en tiempo real!
+
+  Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus reuniones
+  y mucho más!
+how: |-
+  ## Características
+
+  - Edición colaborativa (varios usuarios conectados al mismo tiempo pueden
+    modificar celdas)
+  - Muchas funciones disponibles (estadísticas, matemáticas, texto, etc.)
+  - Posibilidad de añadir comentarios a las celdas
+  - Guardado automático y permanente
+  - Gráficos de base (histogramas, líneas, puntos)
+  - Exportar a HTML, CSV
+  - Tamaño del documento: hasta 100 000 líneas.
+
+  Los documentos @:color.calc son fáciles de compartir (sólo hay que dar
+  la dirección), de exportar, son guardados automáticamente,
+  y son siempre accesibles en Internet
+
+  Quiere una [demostración]({link})?
+public:
+  title: Opciones
+  name: Nombre del calc
+  help: Su calc será <b>eliminado después de 335 días de inactividad</b> (ni acceso,
+    ni modificación), para evitar el crecimiento indefinido de nuestra base de datos.
+  create: Crear un calc
+help:
+  title: Cómo empezar
+  md: |-
+    La interfaz tiene varias diferencias con respecto a otras hojas de cálculo.
+    Esto puede ser confuso.
+
+    Si necesita una mano, la respuesta a sus preguntas puede que se encuentre
+    en nostra [nuestras <abbr title="Preguntas Frecuentes">FAQ</abbr>]({link})
+    Sino, no dude en contactar con nosotros.
+software:
+  title: Software
+  md: |-
+    @:color.calc está basado en software libre [@:soft.calc](@:src.calc)
+
+    [@:soft.calc] está bajo [licencia <abbr title="Common Public Attribution License">
+    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing) y usa muchas bibliotecas
+    libres.
+garden:
+  title: Cultive su jardín
+  md: |-
+    Para participar al desarrollo del software, proponer mejoras o simplemente
+    descargarlo, puede ir a [la página de desarrollo](@:src.calc)

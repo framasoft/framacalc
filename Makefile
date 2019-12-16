@@ -1,12 +1,15 @@
-locales:
-	scripts/locales.sh
+backup-locales:
+	mkdir -p tools/backup/
+	cp -r app/locales/* tools/backup/
 
-push-locales: locales
-	zanata-cli -q -B push
+restore-locales:
+	cp -r tools/backup/* app/locales/
 
-pull-locales:
-	zanata-cli -q -B pull --min-doc-percent 75
-	./scripts/po2yml.sh
+clean-locales: backup-locales
+	cd tools && ./cleanyml.sh
+
+diff-locales:
+	(meld app/locales/ tools/backup/ &)
 
 preview:
 	npm run preview
