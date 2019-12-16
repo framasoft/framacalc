@@ -1,6 +1,13 @@
 image: framasoft/vuefs:latest
 stages:
+  - test
   - deploy
+
+test:
+  stage: test
+  script:
+    - npm install -g yaml-lint
+    - for f in $(find ./app/ -name "*.yml" -type f);do yamllint $f;done;
 
 pages:
   stage: deploy
@@ -8,6 +15,7 @@ pages:
   - npm install
   - npm run preview
   - mv -f public/$CI_PROJECT_NAME/* public
+  - find public -type f -iregex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -execdir gzip -f --keep {} \;
   artifacts:
     paths:
     - public
@@ -21,23 +29,18 @@ production:
   - npm install
   - npm run prod
   - cp ./public/fr/index.html ./public/index.html
+  - for f in $(find -type l);do cp --remove-destination $(readlink -f $f) $f;done;
   - mkdir "${HOME}/.ssh"
   - chmod 700 "${HOME}/.ssh"
-  - if [ ! -z ${DEPLOYEMENT_KNOWN_HOSTS+x} ]; then echo -e "${DEPLOYEMENT_KNOWN_HOSTS}" > ${HOME}/.ssh/known_hosts; fi
+  - echo -e "${DEPLOYEMENT_KNOWN_HOSTS}" > ${HOME}/.ssh/known_hosts;
   - eval `ssh-agent -s`
-  - if [ ! -z ${DEPLOYEMENT_KEY+x} ]; then ssh-add <(echo "${DEPLOYEMENT_KEY}" | base64 --decode -i); fi
-  - if [ ! -z ${DEPLOYEMENT_KEY+x} ]; then echo "put -r public/* ${DEPLOYEMENT_USER}/" | sftp ${DEPLOYEMENT_USER}@${DEPLOYEMENT_HOST}; fi
+  - ssh-add <(echo "${DEPLOYEMENT_KEY}" | base64 --decode -i);
+  - echo "put -r public/* ${DEPLOYEMENT_USER}/" | sftp ${DEPLOYEMENT_USER}@${DEPLOYEMENT_HOST};
   only:
+    refs:
     - master
-
-# Push new translations strings to https://trad.framasoft.org
-trads:
-  stage: deploy
-  image: framasoft/push-trad:latest
-  script:
-  - sed -e "s@<project-version>.*</project-version>@<project-version>$CI_COMMIT_REF_SLUG</project-version>@" -i zanata.xml
-  - sed -e "s@<project>.*</project>@<project>$CI_PROJECT_NAME</project>@" -i zanata.xml
-  - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then mkdir -p ${HOME}/.config; echo -e "${ZANATA_CONFIG_FRAMABOT}" > ${HOME}/.config/zanata.ini; fi
-  - if [ ! -z ${ZANATA_CONFIG_FRAMABOT+x} ]; then make push-locales; fi
-  only:
-    - master
+    variables:
+    - $DEPLOYEMENT_KEY
+    - $DEPLOYEMENT_KNOWN_HOSTS
+    - $DEPLOYEMENT_USER
+    - $DEPLOYEMENT_HOST
