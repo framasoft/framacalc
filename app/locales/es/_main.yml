@@ -45,7 +45,7 @@ software:
   md: |-
     @:color.calc está basado en software libre [@:soft.calc](@:src.calc)
 
-    [@:soft.calc] está bajo [licencia <abbr title="Common Public Attribution License">
+    @:soft.calc está bajo [licencia <abbr title="Common Public Attribution License">
     CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing) y usa muchas bibliotecas
     libres.
 garden:
