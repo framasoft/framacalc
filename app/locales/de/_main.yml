@@ -1,16 +1,15 @@
 meta:
-  title: '@:txt.calc - Kollaborative Tabellenkalkulation online'
   lead: Kollaborative Tabellenkalkulation online
-what: |-
-  ## Was ist es?
+what:
+  title: Was ist es?
+  md: |-
+    Ein "Calc" ist eine kollaborative Tabelle, die online im Browser genutzt
+    werden kann. Die eingegebenen Daten werden automatisch im Internet
+    gespeichert und mehrere Personen können einfach gleichzeitig am selben
+    Dokument arbeiten. Seht alle Änderungen in Echtzeit!
 
-  Ein "Calc" ist eine kollaborative Tabelle, die online im Browser genutzt
-  werden kann. Die eingegebenen Daten werden automatisch im Internet
-  gespeichert und mehrere Personen können einfach gleichzeitig am selben
-  Dokument arbeiten. Seht alle Änderungen in Echtzeit!
-
-  Arbeitet zusammen an euren Bestandslisten, Umfragen, Inhalten, Meetings
-  und mehr!
+    Arbeitet zusammen an euren Bestandslisten, Umfragen, Inhalten, Meetings
+    und mehr!
 how: |-
   ## Eigenschaften
 

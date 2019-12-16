@@ -1,19 +1,14 @@
 meta:
-  title: '@:txt.calc - Foglio di calcolo collaborativo online'
   lead: Foglio di calcolo collaborativo online
-nav:
-  langChange: Cambia lingua
-  lang: Lingua
-  translate: Tradurre
-what: |-
-  ## Cos'è?
+what:
+  title: Cos'è?
+  md: |-
+    Un “calc” è un foglio di calcolo collaborativo online. I tuoi dati sono automaticamente
+    salvati in internet, e i tuoi amici possono collaborare al documento allo stesso
+    tempo. Vedi tutti i cambiamenti in tempo reale!
 
-  Un “calc” è un foglio di calcolo collaborativo online. I tuoi dati sono automaticamente
-  salvati in internet, e i tuoi amici possono collaborare al documento allo stesso
-  tempo. Vedi tutti i cambiamenti in tempo reale!
-
-  Lavorate insieme ai vostri cataloghi, i vostri sondaggi, il vostro contenuto,
-  i vostri incontri e molto di più!
+    Lavorate insieme ai vostri cataloghi, i vostri sondaggi, il vostro contenuto,
+    i vostri incontri e molto di più!
 how: |-
   ## Caratteristiche
 

@@ -6,8 +6,8 @@ commons:
   - src
 
 meta:
-  title: Framacalc
+  title: '@:txt.calc - @:meta.lead'
   author: Framasoft
   canonical: https://accueil.framacalc.org
-  description: '@:meta.lead'
+  description: '@:what.md'
   i18n: https://weblate.framasoft.org/projects/framacalc/

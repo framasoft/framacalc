@@ -1,15 +1,14 @@
 meta:
-  title: '@:txt.calc - Online collaborative spreadsheet'
   lead: Online collaborative spreadsheet
-what: |-
-  ## What is it?
+what:
+  title: What is it?
+  md: |-
+    A “calc“ is an online collaborative spreadsheet. Your data is automatically
+    saved on the internet, and your friends can collaborate on the document at the
+    same time. View all changes in real time!
 
-  A “calc“ is an online collaborative spreadsheet. Your data is automatically
-  saved on the internet, and your friends can collaborate on the document at the
-  same time. View all changes in real time!
-
-  Work together on your inventories, your surveys, your content, your meetings
-  and much more!
+    Work together on your inventories, your surveys, your content, your meetings
+    and much more!
 how: |-
   ## Features
 

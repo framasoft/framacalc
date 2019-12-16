@@ -21,7 +21,6 @@
                       v-model="name"
                       type="text"
                       maxlength="50"
-                      aria-describedby="#name-help"
                       @focusout="name = $t(` ${name}`, '-L@').replace(/[.]/g, '')">
                     </b-form-input>
                   </b-form-group>
@@ -30,7 +29,7 @@
                       type="submit"
                       size="lg"
                       variant="primary"
-                      @click="create()">
+                      @click="create">
                       <i class="fa fa-fw fa-lg fa-th" aria-hidden="true"></i>
                       <span v-html="$t('public.create')"></span> »
                     </b-button>
@@ -43,7 +42,8 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div v-html="$t('what')"></div>
+        <h2 v-html="$t('what.title')"></h2>
+        <div v-html="$t('what.md')"></div>
         <div v-html="$t('how', { link: `https://lite.framacalc.org/CalcDeTest` })"></div>
       </div>
     </div>
@@ -93,7 +93,7 @@ export default {
     };
   },
   methods: {
-    createCalc(event) {
+    create(event) {
       event.preventDefault();
       window.location = `https://lite.framacalc.org/${this.prefix}-${this.name}`;
     },

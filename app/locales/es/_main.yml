@@ -1,14 +1,13 @@
 meta:
-  title: '@:txt.calc - Hoja de cálculo en línea'
   lead: Hoja de cálculo en línea
-what: |-
-  ## ¿Qué es esto?
+what:
+  title: ¿Qué es esto?
+  md: |-
+    Un “calc” es una hoja de cálculo en línea. Sus datos son guardados automáticamente
+    en internet, y sus amigos pueden colaborar al mismo tiempo. Vea todos los cambios en tiempo real!
 
-  Un “calc” es una hoja de cálculo en línea. Sus datos son guardados automáticamente
-  en internet, y sus amigos pueden colaborar al mismo tiempo. Vea todos los cambios en tiempo real!
-
-  Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus reuniones
-  y mucho más!
+    Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus reuniones
+    y mucho más!
 how: |-
   ## Características
 

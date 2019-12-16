@@ -1,15 +1,14 @@
 meta:
-  title: '@:txt.calc - Tableur collaboratif en ligne'
   lead: Tableur collaboratif en ligne
-what: |-
-  ## Qu’est ce que c’est ?
+what:
+  title: Qu’est ce que c’est ?
+  md: |-
+    Un « calc » est un tableur collaboratif en ligne. Vos données sont automatiquement
+    sauvegardées sur internet, et vos amis peuvent collaborer sur le document en même
+    temps. Visualisez tous les changements en temps réel !
 
-  Un « calc » est un tableur collaboratif en ligne. Vos données sont automatiquement
-  sauvegardées sur internet, et vos amis peuvent collaborer sur le document en même
-  temps. Visualisez tous les changements en temps réel !
-
-  Travaillez ensemble sur vos inventaires, vos sondages, vos contenus, vos
-  réunions et bien plus !
+    Travaillez ensemble sur vos inventaires, vos sondages, vos contenus, vos
+    réunions et bien plus !
 how: |-
   ## Fonctionnalités
 
