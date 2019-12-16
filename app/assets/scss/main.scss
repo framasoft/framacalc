@@ -1,3 +1,4 @@
+/* Variables */
 $bgcolor: #eee;
 
 $violet: #6a5687;
@@ -13,120 +14,21 @@ $img-ombre: 0px 2px 6px rgba(50, 50, 50, 0.4);
 $carousel-ombre: 0px 3px 3px rgba(50, 50, 50, 0.5);
 $button-ombre: 0px 1px 1px rgba(50, 50, 50, 0.5);
 
-body {
-  background: $bgcolor;
-  font-size:14px;
-}
+$primary: $violet !default;
+$secondary: #616161 !default;
+$danger: $rouge;
+$warning: $orange;
+$info: $bleu;
+$success: $vert;
 
-h1 {
-  font-family: "DejaVu Sans",Verdana,Geneva,sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-}
+/* Frameworks */
+// @import 'frameworks/bootstrap3';
+@import 'frameworks/bootstrap4';
 
-.lead {
-  font-style:italic;
-}
+/* Fonts */
+@import '../../../node_modules/fork-awesome/css/fork-awesome.min.css';
+@import 'fonts/ptsans_caption';
 
-.container.ombre {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  padding: 20px 30px;
-}
-
-#tuto-faq p[role="presentation"] i,
-#tuto-video > p[role="presentation"] i,
-#le-logiciel > p[role="presentation"] i,
-#jardin > p[role="presentation"] i {
-  font-size:50px;
-}
-
-#howitworks {
-  margin-top:20px;
-}
-
-body {
-  font-family: "DejaVu Sans", Verdana, Geneva, sans-serif;
-  color:#333;
-}
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: PTSansCaption, GillSans, sans-serif;
-  font-weight: bold;
-  color: #616161;
-}
-
-h1 {font-family: "DejaVu Sans", Verdana, Geneva, sans-serif; font-weight:bold; }
-
-header .lead {
-  font-style:italic;
-}
-
-.trait { /* hr */
-  background-color: #EEE;
-  height: 11px;
-  margin: 15px 0px;
-  border: medium none;
-}
-
-.ombre {
-  background-color: #FFF;
-  -webkit-box-shadow: $ombre;
-  -moz-box-shadow: $ombre;
-  box-shadow: $ombre;
-}
-
-.container.ombre {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  padding: 20px 30px;
-}
-
-img.ombre {
-  box-shadow: $img-ombre;
-  margin:10px;
-  padding:0;
-  width:90%;
-}
-
-.caption {max-width:620px;margin: 0 auto}
-
-main {
-  padding-top:10px;
-}
-
-.mypads, .pad-options {
-  margin-top:20px;
-}
-
-a.btn-primary, a.btn-soutenir, a.btn-info {
-  color:#fff;
-}
-
-.signature {
-  font-style: italic;
-  text-align:right;
-  color:#795548;
-}
-
-#expiration-help {
-  margin-top: 15px;
-}
-
-@import "frama/colors";
-@import "frama/links";
-@import "frama/text";
-// @import "frama/backgrounds";
-@import "frama/alerts";
-@import "frama/buttons";
-// @import "frama/carousel";
-// @import "frama/internav";
-// @import "frama/labels";
-@import "frama/modals";
-// @import "frama/navs";
-// @import "frama/panels";
-// @import "frama/popovers";
-
-@import "frama/cleaning";
-@import "frama/a11y";
+/* Frama */
+@import 'frama/bs4';
+@import 'frama/common';

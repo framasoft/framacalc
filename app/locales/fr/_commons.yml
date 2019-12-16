@@ -1,0 +1,23 @@
+nav:
+  langChange: Changer la langue
+  lang: Langue
+  translate: Traduire
+carousel:
+  play: Lecture
+  pause: Pause
+  prev: Diapo précédente
+  next: Diapo suivante
+  goto: Aller à la diapo
+  indicator: Sélectionner une diapo à afficher
+txt:
+  dio: Dégooglisons Internet
+  newWindow: nouvelle fenêtre
+  close: Fermer
+  nevershow: Ne plus afficher
+  source: Source
+  contactUs: Contactez-nous
+  search: Rechercher
+  backTop: Retour en haut
+color:
+  dio: <b class="violet">Dégooglisons</b> <b class="orange">Internet</b>
+

@@ -1,0 +1,9 @@
+nav:
+  langChange: 'Thay đổi ngôn ngữ:'
+  lang: Ngôn ngữ
+  translate: Dịch
+txt:
+  dio: Internet không-còn-google
+color:
+  dio: <b class="violet">Internet</b> <b class="orange">không-còn-google</b>
+

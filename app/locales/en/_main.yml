@@ -1,0 +1,55 @@
+meta:
+  lead: Online collaborative spreadsheet
+what:
+  title: What is it?
+  md: |-
+    A “calc“ is an online collaborative spreadsheet. Your data is automatically
+    saved on the internet, and your friends can collaborate on the document at the
+    same time. View all changes in real time!
+
+    Work together on your inventories, your surveys, your content, your meetings
+    and much more!
+how: |-
+  ## Features
+
+  - Collaborative editing (several users connected to the same spreadsheet can
+    simultaneously modify cells)
+  - Many functions available (statistics, financial, mathematics, text, etc.)
+  - Possibility to comment cells
+  - Permanent and automatic backup
+  - Basic graphs (histogram, lines, points)
+  - HTML export, CSV
+  - Document size: up to 100,000 lines
+
+  @:color.calc documents are easy to share (just provide the address),
+  to export, are saved automatically, and remain always accessible by Internet
+
+  Want a [demonstration]({link})?
+public:
+  title: Options
+  name: Calc name
+  help: Your calc will be <b> deleted after 335 days of inactivity</b> (no access,
+    no modification), in order to avoid enlargement of our database indefinitely.
+  create: Create a calc
+help:
+  title: Getting Started
+  md: |-
+    The interface has some differences compared to other spreadsheets. They can
+    be confusing.
+
+    If you need a hand, the answer to your questions may be in [our
+    <abbr title="Frequently Asked Questions">FAQ</abbr>]({link}).
+    Otherwise, do not hesitate to contact us.
+software:
+  title: Software
+  md: |-
+    @:color.calc is based on free software [@:soft.calc](@:src.calc)
+
+    @:soft.calc is under [<abbr title="Common Public Attribution License">
+    CPAL</abbr> license](https://github.com/audreyt/ethercalc#licensing)
+    and uses many free libraries.
+garden:
+  title: Cultivate your garden
+  md: |-
+    To participate in the development of the software, suggest improvements
+    or simply download it, go to [the development site](@:src.calc)
