@@ -1,1 +1,39 @@
-{}
+how: "## Foncionalitats\n\n- Edicion collaborativa (mantunes connectat sus la meteissa\
+  \ fuèlha de calcul pòdon modificar las celulas)\n- Mantunas foncions disponiblas\
+  \ (estatisticas, finançariás, matematicas, tèxt, etc.)\n- Possibilitat de comentar\
+  \ las celulas\n- Salvament automatic e permanent\n- Graf basic (istogrames, linhas,\
+  \ punts)\n- Exportacion HTML e CSV\n- Talha dels documents : fins a 100,000 linhas\n\
+  \n@:color.calc los documents son simples a partejar (donatz pas que l’adreça),\n\
+  a exportar, son salvagardats automaticament, e demòran accessibles sus Internet\n\
+  \nVolètz veire una [demonstracion]({link}) ?"
+software:
+  md: "@:color.calc es basat sul logicial liure [@:soft.calc](@:src.calc)\n\n@:soft.calc\
+    \ es jos [<abbr title=\"Licéncia Common Public Attribution\">\nCPAL</abbr> license](https://github.com/audreyt/ethercalc#licensing)\n\
+    e utiliza mantunas autras bibliotècas."
+  title: Lo logicial
+help:
+  md: "L’interfàcia a qualquas deferéncias amb los autres classadors. Pòdon\nèsser\
+    \ desconcertantas.\n\nSe vos cal un còp de man, la responsa a vòstras questions\
+    \ se tròba\nbenlèu dins [nòstra <abbr title=\"Fièra A Questions\">FAQ</abbr>]({link}).\n\
+    Autrament, esitetz pas a nos contactar."
+  title: Primièrs passes
+public:
+  help: Suprimirem vòstre calc aprèp <b>335 jorns d’inactivitat</b>(cap d’accès o
+    modificacion), per dire d’empachar que nòstra basa de donadas venga gròssa sens
+    fin.
+  create: Crear un calc
+  name: Nom del calc
+  title: Opcions
+what:
+  md: "Un « calc » es un tabulari collaboratiu en linha. Vòstras donadas son automaticament\n\
+    salvagardas sus Internet, e vòstres amics pòdon collaborar sul meteis document\
+    \ al meteis\ntemps. Vejatz totes los cambiaments immediatament !\n\nTrabalhatz\
+    \ ensem sus vòstres inventaris, sondatges, contenguts, vòstras\nreünions e encara\
+    \ mai !"
+  title: Qu’es aquò ?
+garden:
+  md: "Per participar al desvolopament del logicial, prepausar de melhoraments \n\
+    o simplament lo telecargar, anatz sul [site de desvolopament](@:src.calc)"
+  title: Cultivatz vòstre òrt
+meta:
+  lead: Tabulari collaboratiu en linha
