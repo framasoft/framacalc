@@ -23,7 +23,8 @@ how: |-
   - HTML-Export, CSV
   - Dokumentgröße: Bis 100.000 Zeilen
 
-  @:color.calc Dokumente sind leicht zu teilen (einfach die Addresse weitergeben),
+  @:color.calc Dokumente sind leicht zu teilen (einfach die Addresse
+  weitergeben),
   zu exportieren, werden automatisch gespeichert und bleiben immer über das
   Internet erreichbar.
 
@@ -31,9 +32,9 @@ how: |-
 public:
   title: Möglichkeiten
   name: Name von dem Calc
-  help: Euer Calc wird <b>nach 335 Tagen ohne Aktivität gelöscht</b>
-    (kein Zugriff, keine Veränderung) um zu verhindern, dass unsere Datenbank
-    endlos wächst.
+  help: |-
+    Euer Calc wird **nach 335 Tagen ohne Aktivität gelöscht** (kein Zugriff,
+    keine Veränderung) um zu verhindern, dass unsere Datenbank endlos wächst.
   create: Calc erstellen
 help:
   title: Los geht's!
@@ -48,11 +49,12 @@ software:
   md: |-
     @:color.calc  basiert auf freier Software [@:soft.calc](@:src.calc)
 
-    @:soft.calc steht unter der  [<abbr title="Common Public Attribution License">
+    @:soft.calc steht unter der [<abbr title="Common Public Attribution License">
     CPAL</abbr>-Lizenz](https://github.com/audreyt/ethercalc#licensing)
      und verwendet viele freie Softwarebibliotheken.
 garden:
   title: Kultiviert euren Garten
   md: |-
-    Um an der Entwicklung der Software teilzunehmen, Verbesserungen vorzuschlagen
-    oder sie einfach nur herunterzuladen, besucht [das Github-Repository](@:src.calc)
+    Um an der Entwicklung der Software teilzunehmen, Verbesserungen 
+    vorzuschlagen oder sie einfach nur herunterzuladen, besucht [das 
+    Github-Repository](@:src.calc)

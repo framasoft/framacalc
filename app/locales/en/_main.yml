@@ -4,8 +4,8 @@ what:
   title: What is it?
   md: |-
     A “calc“ is an online collaborative spreadsheet. Your data is automatically
-    saved on the internet, and your friends can collaborate on the document at the
-    same time. View all changes in real time!
+    saved on the internet, and your friends can collaborate on the document at 
+    the same time. View all changes in real time!
 
     Work together on your inventories, your surveys, your content, your meetings
     and much more!
@@ -28,8 +28,10 @@ how: |-
 public:
   title: Options
   name: Calc name
-  help: Your calc will be <b> deleted after 335 days of inactivity</b> (no access,
-    no modification), in order to avoid enlargement of our database indefinitely.
+  help: |-
+    Your calc will be **deleted after 335 days of inactivity** (no access,
+    no modification), in order to avoid enlargement of our database
+    indefinitely.
   create: Create a calc
 help:
   title: Getting Started
