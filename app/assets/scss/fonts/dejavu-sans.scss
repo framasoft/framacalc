@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-webfont.woff2') format('woff2'),
+       url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-oblique-webfont.woff2') format('woff2'),
+       url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-oblique-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-bold-webfont.woff2') format('woff2'),
+       url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-bold-oblique-webfont.woff2') format('woff2'),
+       url('~vuefs-commons/app/assets/fonts/dejavu-sans/dejavu-sans-bold-oblique-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+

@@ -7,7 +7,7 @@ test:
   stage: test
   script:
     - npm install -g yaml-lint
-    - for f in $(find ./app/ -name "*.yml" -type f);do yamllint $f;done;
+    - for f in $(find ./app/ -name "*.yml" -type f);do echo $f; yamllint $f;done;
 
 pages:
   stage: deploy
@@ -22,6 +22,15 @@ pages:
   cache:
     paths:
       - node_modules/
+  only:
+    refs:
+    - master
+  except:
+    variables:
+    - $DEPLOYEMENT_KEY
+    - $DEPLOYEMENT_KNOWN_HOSTS
+    - $DEPLOYEMENT_USER
+    - $DEPLOYEMENT_HOST
 
 production:
   stage: deploy

@@ -3,11 +3,12 @@ meta:
 what:
   title: ¿Qué es esto?
   md: |-
-    Un “calc” es una hoja de cálculo en línea. Sus datos son guardados automáticamente
-    en internet, y sus amigos pueden colaborar al mismo tiempo. Vea todos los cambios en tiempo real!
+    Un “calc” es una hoja de cálculo en línea. Sus datos son guardados
+    automáticamente en internet, y sus amigos pueden colaborar al mismo
+    tiempo. Vea todos los cambios en tiempo real!
 
-    Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus reuniones
-    y mucho más!
+    Trabajen juntos en sus inventarios, sus encuestas, su contenido, sus
+    reuniones y mucho más!
 how: |-
   ## Características
 
@@ -28,8 +29,10 @@ how: |-
 public:
   title: Opciones
   name: Nombre del calc
-  help: Su calc será <b>eliminado después de 335 días de inactividad</b> (ni acceso,
-    ni modificación), para evitar el crecimiento indefinido de nuestra base de datos.
+  help: |-
+    Su calc será **eliminado después de 335 días de inactividad** (ni acceso,
+    ni modificación), para evitar el crecimiento indefinido de nuestra base de
+    datos.
   create: Crear un calc
 help:
   title: Cómo empezar
@@ -46,8 +49,8 @@ software:
     @:color.calc está basado en software libre [@:soft.calc](@:src.calc)
 
     @:soft.calc está bajo [licencia <abbr title="Common Public Attribution License">
-    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing) y usa muchas bibliotecas
-    libres.
+    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing) y usa muchas
+    bibliotecas libres.
 garden:
   title: Cultive su jardín
   md: |-
