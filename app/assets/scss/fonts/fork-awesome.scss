@@ -1,0 +1,22 @@
+@import '~fork-awesome/scss/variables';
+@import '~fork-awesome/scss/mixins';
+@import '~fork-awesome/scss/functions';
+
+@font-face {
+  font-family: 'ForkAwesome';
+  src: url('~fork-awesome/fonts/forkawesome-webfont.woff2') format('woff2'),
+    url('~fork-awesome/fonts/forkawesome-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import '~fork-awesome/scss/core';
+@import '~fork-awesome/scss/larger';
+@import '~fork-awesome/scss/fixed-width';
+@import '~fork-awesome/scss/list';
+@import '~fork-awesome/scss/bordered-pulled';
+@import '~fork-awesome/scss/animated';
+@import '~fork-awesome/scss/rotated-flipped';
+@import '~fork-awesome/scss/stacked';
+@import '~fork-awesome/scss/icons';
+@import '~fork-awesome/scss/screen-reader';

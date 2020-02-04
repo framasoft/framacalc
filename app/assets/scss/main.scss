@@ -26,9 +26,10 @@ $success: $vert;
 @import 'frameworks/bootstrap4';
 
 /* Fonts */
-@import '../../../node_modules/fork-awesome/css/fork-awesome.min.css';
-@import 'fonts/ptsans_caption';
+@import 'fonts/fork-awesome';
+@import 'fonts/dejavu-sans';
+@import 'fonts/roboto';
 
 /* Frama */
-@import 'frama/bs4';
-@import 'frama/common';
+@import 'frama/bootstrap4';
+@import '~vuefs-commons/app/assets/scss/frama/common';

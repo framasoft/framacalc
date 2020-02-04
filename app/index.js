@@ -6,13 +6,14 @@ import BootstrapVue from 'bootstrap-vue';
 import marked from 'marked';
 import deburr from 'lodash/deburr';
 
+import is from 'vuefs-commons/app/plugins/is';
+import cookie from 'vuefs-commons/app/plugins/cookie';
+import merge from 'vuefs-commons/app/plugins/merge';
+import icon from 'vuefs-commons/app/components/commons/Icon.vue';
+
 import App from './App.vue';
 
 import './assets/scss/main.scss';
-
-import is from './plugins/is';
-import cookie from './plugins/cookie';
-import merge from './plugins/merge';
 
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
@@ -22,6 +23,7 @@ Vue.component('vue-headful', vueHeadful);
 Vue.use(is);
 Vue.use(cookie);
 Vue.use(merge);
+Vue.component('icon', icon);
 
 const defaultLocale = 'fr';
 const locales = {};
@@ -49,7 +51,7 @@ req.keys().forEach((key) => {
 });
 
 // Import commons data list
-req = require.context('./data/commons/', false, /\.yml$/);
+req = require.context('../node_modules/vuefs-commons/app/data/commons/', false, /\.yml$/);
 req.keys().forEach((key) => {
   commons.push(key.replace(/\.\/(.*)\.yml/, '$1'));
 });
@@ -65,11 +67,14 @@ let defaultRouteLang = '';
 
 const messages = {};
 const numberFormats = {};
-messages.locales = require('./locales/lang.yml'); // eslint-disable-line
+messages.locales = require('../node_modules/vuefs-commons/app/locales/lang.yml'); // eslint-disable-line
 messages.locales.available = Object
   .keys(messages.locales)
   .filter(n => Object.keys(locales).includes(n)
     && (locales[n].includes('main') || locales[n].includes('_main')));
+messages.locales.visible = Object
+  .keys(messages.locales)
+  .filter(n => Object.keys(locales).includes(n) && (locales[n].includes('_main')));
 
 // Data import
 let data = {};
@@ -80,7 +85,7 @@ if (Array.isArray(project.commons) && project.commons.length > 0) {
   [commons] = [project.commons];
 }
 for (let i = 0; i < commons.length; i += 1) {
-  req = require(`./data/commons/${commons[i]}.yml`) || {}; // eslint-disable-line
+  req = require(`../node_modules/vuefs-commons/app/data/commons/${commons[i]}.yml`) || {}; // eslint-disable-line
   data[commons[i]] = merge.$(data[commons[i]], JSON.parse(JSON.stringify(req)));
 }
 data = merge.$(data, JSON.parse(JSON.stringify(project)));
@@ -101,7 +106,7 @@ data.self = new URL(scripts[scripts.length - 1].src, data.url).href;
 if (process.env.NODE_ENV === 'production'
   && data.meta.canonical !== undefined
   && /^http/.test(data.meta.canonical)) {
-  data.baseurl = data.meta.canonical;
+  data.baseurl = data.meta.canonical.replace(/(.+?)\/?$/, '$1/');
 } else {
   data.baseurl = `${data.self.split('/').slice(0, -1).join('/')}/`;
 }
@@ -126,16 +131,13 @@ messages.locales.available.forEach((k) => {
   msg = {txt: {}, html: {}};
   msg = merge.$(msg, JSON.parse(JSON.stringify(data)));
 
-  // Init with locales/lg/_commons.yml
-  if (locales[k].includes('_commons')) {
-    req = require(`./locales/${k}/_commons.yml`) || {};
-    msg = merge.$(msg, JSON.parse(JSON.stringify(req)));
-  }
-
-  // locales/lg/_main.yml (active and visible)
-  // or locales/lg/main.yml (active and hidden)
-  const mainFile = locales[k].filter(filename => /^_?main/.test(filename));
+  const mainFile = locales[k].filter(filename => /^_?main$/.test(filename));
   if (mainFile.length > 0) {
+    // Init with ../node_modules/vuefs-commons/app/locales/lg/_commons.yml
+    req = require(`../node_modules/vuefs-commons/app/locales/${k}/_commons.yml`) || {};
+    msg = merge.$(msg, JSON.parse(JSON.stringify(req)));
+    // then import locales/lg/_main.yml (active and visible)
+    // or locales/lg/main.yml (active and hidden)
     req = require(`./locales/${k}/${mainFile[0]}.yml`) || {};
     msg = merge.$(msg, JSON.parse(JSON.stringify(req)));
   }
@@ -143,7 +145,7 @@ messages.locales.available.forEach((k) => {
   // locales/lg/*.yml
   for (let i = 0; i < locales[k].length; i += 1) {
     const file = locales[k][i];
-    if (!/main|_commons/.test(file)) {
+    if (!/^_?main$/.test(file)) {
       msg[file] = msg[file] || {};
       req = require(`./locales/${k}/${file}.yml`) || {};
       msg[file] = merge.$(msg[file], JSON.parse(JSON.stringify(req)));
@@ -216,39 +218,86 @@ const i18n = new VueI18n({
 
 // Override $t() for markdown and formatting
 Vue.prototype.$t = (key, locale, values) => {
-  let translated = key;
+  let translated = '';
+  let trueLocale = '';
   let options = '';
+
   if (typeof locale === 'string') {
-    translated = i18n.t(key, locale, values);
-    options = locale.substring(locale.indexOf(' ') + 1);
+    // Split locale and options
+    if (i18n.messages.locales.available.indexOf(locale.split(' ')[0]) > 0) {
+      // locale = 'en_GB -t', 'fr_FR latin'…
+      [trueLocale] = [locale.split(' ')[0]];
+      options = locale.substring(locale.indexOf(' ') + 1);
+    } else {
+      // locale = '-t', 'latin'…
+      trueLocale = i18n.locale;
+      options = locale;
+    }
+
+    if (/^-.*?k.*?$/.test(options)) {
+      // -k means we only want to keep the key or text/html to format
+      translated = key;
+    } else {
+      // we want to format the translation
+      translated = i18n.t(key, trueLocale, values);
+    }
   } else {
+    // "locale" is missing so, in fact, it is a "value"
     translated = (Array.isArray(values) || typeof values === 'object')
       ? i18n.t(key, undefined, values)
       : i18n.t(key, undefined, locale);
   }
-  let formatted = translated;
+
+  let formatted = typeof translated === 'string'
+    ? translated
+      // Translate :emoji:
+      .replace(/:((?!.*--.*|.*__.*)[a-z0-9_-]+?):/g, (c, $1) => {
+        if (i18n.te(`emoji['${$1}']`)) {
+          return i18n.t(`emoji['${$1}']`);
+        }
+        return `:${$1}:`;
+      })
+      // Translate linked @:key or @:(key)
+      // (cf linkKeyMatcher in vue-i18n/src/index.js)
+      .replace(/@:\(?([\w\-_|.]+[\w\-_|]+)\)?/g, (c, $1) => i18n.t($1))
+      // Line break for md (maybe not very useful)
+      .replace(/  \n/g, '  \n') // eslint-disable-line no-irregular-whitespace
+      .replace(`${data.baseurl}/`, data.baseurl)
+    : translated;
 
   // Convert to Markdown
-  if (/\.md$/.test(key)
-    || (typeof translated === 'string' && /\n\n/.test(translated))) {
-    formatted = marked(translated.replace(/  \n/g, '  \n')); // eslint-disable-line no-irregular-whitespace
+  if (typeof formatted === 'string' && !/^https?:\/\//.test(formatted)) {
+    formatted = (/\n\n/.test(formatted))
+      ? marked(formatted)
+      // marked convert single string to paragraphs
+      // or to ordered list
+      // so cleaning is needed
+      : marked(formatted)
+        .replace(/^<p>(.*?)<\/p>\n?$/sm, '$1')
+        .replace(/^<ol(.*?)>\n<li>(.*?)<\/li>\n<\/ol>\n?$/sm,
+          (c, $1, $2) => `${$1 ? $1.replace(/[^0-9]/g, '') : '1'}. ${$2}`);
   }
 
   // Formatting options
-  if (options) {
+  if (options !== '') {
+    // -t or text (html cleanup)
     if (/text/.test(options) || /^-.*?t.*?$/.test(options)) {
       const tmp = new DOMParser().parseFromString(formatted, 'text/html');
       formatted = tmp.body.textContent || '';
     }
+    // -L or latin (remove diacritics)
     if (/latin/.test(options) || /^-.*?L.*?$/.test(options)) {
       formatted = deburr(formatted);
     }
+    // -l (lowercase)
     if (/^-.*?l.*?$/.test(options)) {
       formatted = formatted.toLowerCase();
     }
+    // -U (uppercase)
     if (/^-.*?U.*?$/.test(options)) {
       formatted = formatted.toUpperCase();
     }
+    // -K (capitalize)
     if (/^-.*?K.*?$/.test(options)) {
       formatted = formatted.replace(/^./, v => v.toUpperCase());
     }
