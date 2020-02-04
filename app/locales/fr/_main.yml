@@ -3,9 +3,10 @@ meta:
 what:
   title: Qu’est ce que c’est ?
   md: |-
-    Un « calc » est un tableur collaboratif en ligne. Vos données sont automatiquement
-    sauvegardées sur internet, et vos amis peuvent collaborer sur le document en même
-    temps. Visualisez tous les changements en temps réel !
+    Un « calc » est un tableur collaboratif en ligne. Vos données sont
+    automatiquement sauvegardées sur internet, et vos amis peuvent collaborer 
+    sur le document en même temps. Visualisez tous les changements en temps 
+    réel !
 
     Travaillez ensemble sur vos inventaires, vos sondages, vos contenus, vos
     réunions et bien plus !
@@ -30,9 +31,10 @@ how: |-
 public:
   title: Options
   name: Nom du calc
-  help: Votre calc sera <b>supprimé au bout de 335 jours d’inactivité</b> (aucun accès,
-    aucune modification), afin d’éviter de faire grossir indéfiniment notre base de
-    données.
+  help: |-
+    Votre calc sera **supprimé au bout de 335 jours d’inactivité** (aucun
+    accès, aucune modification), afin d’éviter de faire grossir indéfiniment
+    notre base de données.
   create: Créer un calc
 help:
   title: Prise en main
@@ -49,10 +51,11 @@ software:
     @:color.calc repose sur le logiciel libre [@:soft.calc](@:src.calc)
 
     @:soft.calc est sous [licence <abbr title="Common Public Attribution License">
-    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing)</a> et fait appel
-    à de nombreuses librairies libres.
+    CPAL</abbr>](https://github.com/audreyt/ethercalc#licensing)</a> et fait
+    appel à de nombreuses librairies libres.
 garden:
   title: Cultivez votre jardin
   md: |-
     Pour participer au développement du logiciel, proposer des améliorations
-    ou simplement le télécharger, rendez-vous sur [le site de développement](@:src.calc)
+    ou simplement le télécharger, rendez-vous sur [le site de
+    développement](@:src.calc)
