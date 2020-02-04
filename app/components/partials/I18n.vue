@@ -1,21 +1,34 @@
 <template>
   <div class="pull-right">
-    <b-dropdown right variant="outline-secondary" :title="$t('nav.langChange')">
+    <b-dropdown
+      right
+      variant="outline-secondary"
+      :title="$t('nav.langChange', '-t')"
+    >
       <template v-slot:button-content>
-        <i class="fa fa-lg fa-language" aria-hidden="true"></i>
-        <span v-html="$t('nav.lang')"></span>
+        <icon
+          name="language"
+          variant="fa-lg"
+          :label="$t('nav.lang')"
+        />
       </template>
-      <b-dropdown-item v-for="lang in locales.available"
+      <b-dropdown-item
+        v-for="lang in locales.visible"
         :key="lang"
+        :to="`/${lang}/${($route.path.split('/')[2] || '')}`"
         @click="changeLanguage(lang)"
-        :to="`/${lang}/${($route.path.split('/')[2] || '')}`">
+      >
         {{ locales[lang] }}
       </b-dropdown-item>
-      <b-dropdown-divider v-if="$te('meta.i18n')"></b-dropdown-divider>
-      <b-dropdown-item v-if="$te('meta.i18n')"
-        :href="$t('meta.i18n')">
-        <i class="fa fa-fw fa-plus" aria-hidden="true"></i>
-        <span v-html="$t('nav.translate')"></span>
+      <b-dropdown-divider v-if="$te('meta.i18n')" />
+      <b-dropdown-item
+        v-if="$te('meta.i18n')"
+        :href="$t('meta.i18n')"
+      >
+        <icon
+          name="plus"
+          :label="$t('nav.translate')"
+        />
       </b-dropdown-item>
     </b-dropdown>
   </div>
