@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.20",
     "fork-awesome": "^1.1.7",
     "lodash": "^4.17.15",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "roboto-fontface": "^0.10.0",
     "vue": "^2.6.11",
     "vue-headful": "^2.1.0",
